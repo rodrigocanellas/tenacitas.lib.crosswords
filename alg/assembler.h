@@ -16,12 +16,12 @@
 #include <string_view>
 #include <vector>
 
-#include <tenacitas/lib/container/typ/matrix.h>
-#include <tenacitas/lib/crosswords/evt/events.h>
-#include <tenacitas/lib/crosswords/typ/grid.h>
-#include <tenacitas/lib/log/alg/logger.h>
-#include <tenacitas/lib/math/alg/factorial.h>
-#include <tenacitas/lib/number/alg/format.h>
+#include <tenacitas.lib.container/typ/matrix.h>
+#include <tenacitas.lib.crosswords/evt/events.h>
+#include <tenacitas.lib.crosswords/typ/grid.h>
+#include <tenacitas.lib.log/alg/logger.h>
+#include <tenacitas.lib.math/alg/factorial.h>
+#include <tenacitas.lib.number/alg/format.h>
 
 namespace tenacitas::lib::crosswords::bus {
 
@@ -32,7 +32,7 @@ bool all_words_fit(const typ::grid &p_grid) {
   index _row_size{p_grid.get_num_rows()};
   index _col_size{p_grid.get_num_cols()};
 
-  grid::const_layout_ite _end = p_grid.end();
+  typ::grid::const_layout_ite _end = p_grid.end();
   for (grid::const_layout_ite _layout = p_grid.begin(); _layout != _end;
        ++_layout) {
     index _word_size{typ::get_size(_layout->get_word())};
@@ -450,8 +450,16 @@ struct assembler {
       _permutation.push_back(_entry);
     }
 
-    uint64_t _max_permutations{
+    auto _maybe{
         lib::math::alg::factorial<uint64_t>(_entries.get_num_entries())};
+
+    uint64_t _max_permutations{0};
+
+    if (!_maybe) {
+      return nullptr;
+    }
+
+    _max_permutations = _maybe.value();
 
     if (p_max_tries <= _max_permutations) {
       _max_permutations = p_max_tries;

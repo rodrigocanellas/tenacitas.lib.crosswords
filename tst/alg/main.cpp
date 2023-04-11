@@ -10,11 +10,11 @@
 #include <string>
 #include <vector>
 
-#include <tenacitas/lib/crosswords/alg/assembler.h>
-#include <tenacitas/lib/crosswords/typ/grid.h>
-#include <tenacitas/lib/log/alg/logger.h>
-#include <tenacitas/lib/program/alg/options.h>
-#include <tenacitas/lib/test/alg/tester.h>
+#include <tenacitas.lib.crosswords/alg/assembler.h>
+#include <tenacitas.lib.crosswords/typ/grid.h>
+#include <tenacitas.lib.log/alg/logger.h>
+#include <tenacitas.lib.program/alg/options.h>
+#include <tenacitas.lib.test/alg/tester.h>
 
 using namespace tenacitas::lib;
 
@@ -1415,38 +1415,38 @@ int main(int argc, char **argv) {
   log::alg::set_debug_level();
   //  log::alg::set_file_writer("crosswords");
 
-  tester::alg::test _test(argc, argv);
+  test::alg::tester _tester(argc, argv);
 
-  run_test(_test, test_000);
-  run_test(_test, test_001);
-  run_test(_test, test_003);
-  run_test(_test, test_004);
-  run_test(_test, test_005);
-  run_test(_test, test_006);
-  run_test(_test, test_007);
-  run_test(_test, test_007a);
-  run_test(_test, test_008);
-  run_test(_test, test_009);
-  run_test(_test, test_010);
-  run_test(_test, test_010a);
-  run_test(_test, test_011);
-  run_test(_test, test_012);
-  run_test(_test, test_013);
-  run_test(_test, test_014);
-  run_test(_test, test_015);
-  run_test(_test, test_016);
-  run_test(_test, test_017);
-  run_test(_test, test_018);
-  run_test(_test, test_019);
-  run_test(_test, test_020);
-  run_test(_test, test_021);
-  run_test(_test, test_023);
-  run_test(_test, test_024);
-  run_test(_test, test_025);
-  run_test(_test, test_026);
-  run_test(_test, test_027);
-  run_test(_test, test_028);
-  run_test(_test, test_029);
-  run_test(_test, test_030);
-  run_test(_test, test_031);
+  run_test(_tester, test_000);
+  run_test(_tester, test_001);
+  run_test(_tester, test_003);
+  run_test(_tester, test_004);
+  run_test(_tester, test_005);
+  run_test(_tester, test_006);
+  run_test(_tester, test_007);
+  run_test(_tester, test_007a);
+  run_test(_tester, test_008);
+  run_test(_tester, test_009);
+  run_test(_tester, test_010);
+  run_test(_tester, test_010a);
+  run_test(_tester, test_011);
+  run_test(_tester, test_012);
+  run_test(_tester, test_013);
+  run_test(_tester, test_014);
+  run_test(_tester, test_015);
+  run_test(_tester, test_016);
+  run_test(_tester, test_017);
+  run_test(_tester, test_018);
+  run_test(_tester, test_019);
+  run_test(_tester, test_020);
+  run_test(_tester, test_021);
+  run_test(_tester, test_023);
+  run_test(_tester, test_024);
+  run_test(_tester, test_025);
+  run_test(_tester, test_026);
+  run_test(_tester, test_027);
+  run_test(_tester, test_028);
+  run_test(_tester, test_029);
+  run_test(_tester, test_030);
+  run_test(_tester, test_031);
 }

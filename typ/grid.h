@@ -19,8 +19,8 @@
 #include <utility>
 #include <vector>
 
-#include <tenacitas/lib/container/typ/matrix.h>
-#include <tenacitas/lib/log/alg/logger.h>
+#include <tenacitas.lib.container/typ/matrix.h>
+#include <tenacitas.lib.log/alg/logger.h>
 
 namespace tenacitas::lib::crosswords::typ {
 

@@ -9,8 +9,8 @@
 #include <iostream>
 #include <memory>
 
-#include <tenacitas/lib/async/alg/dispatcher.h>
-#include <tenacitas/lib/crosswords/typ/grid.h>
+#include <tenacitas.lib.async/alg/dispatcher.h>
+#include <tenacitas.lib.crosswords/typ/grid.h>
 
 namespace tenacitas::lib::crosswords::evt {
 

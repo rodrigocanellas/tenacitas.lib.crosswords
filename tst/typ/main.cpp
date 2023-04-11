@@ -7,10 +7,10 @@
 #include <iterator>
 #include <string>
 
-#include <tenacitas/lib/crosswords/typ/grid.h>
-#include <tenacitas/lib/log/alg/logger.h>
-#include <tenacitas/lib/program/alg/options.h>
-#include <tenacitas/lib/test/alg/tester.h>
+#include <tenacitas.lib.crosswords/typ/grid.h>
+#include <tenacitas.lib.log/alg/logger.h>
+#include <tenacitas.lib.program/alg/options.h>
+#include <tenacitas.lib.test/alg/tester.h>
 
 using namespace tenacitas::lib;
 
@@ -114,9 +114,9 @@ struct test_002 {
 
 int main(int argc, char **argv) {
 
-  tester::alg::test _test(argc, argv);
+  test::alg::tester _tester(argc, argv);
 
-  run_test(_test, test_000);
-  run_test(_test, test_001);
-  run_test(_test, test_002);
+  run_test(_tester, test_000);
+  run_test(_tester, test_001);
+  run_test(_tester, test_002);
 }
