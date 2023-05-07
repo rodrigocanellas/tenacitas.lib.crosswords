@@ -27,7 +27,6 @@ struct new_grid_to_organize {
   }
 
   std::shared_ptr<typ::grid> grid;
-  static constexpr uint64_t id{1669764200512};
 };
 
 /// \brief Publiished when a grid was assembled
@@ -46,7 +45,6 @@ struct assembly_finished {
   }
 
   std::shared_ptr<typ::grid> grid;
-  static constexpr uint64_t id{1669764189389};
 };
 
 /// \brief Published when all attemps of assembling grids should stop
@@ -57,8 +55,6 @@ struct stop_organizing {
     p_out << "stop_organizing";
     return p_out;
   }
-
-  static constexpr uint64_t id{1669764176980};
 };
 
 /// \brief Published when a new attempt to assemble a grid has started
@@ -75,8 +71,6 @@ struct new_attempt {
     p_out << p_new_attempt.number;
     return p_out;
   }
-
-  static constexpr uint64_t id{1669764166981};
   uint64_t number{0};
 };
 
